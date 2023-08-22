@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porfolio</title>
+    <link rel="stylesheet" href="style.css" />
+   
+    <script
+      src="https://kit.fontawesome.com/e508e45b37.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="toggle-button">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <!-- <div class="menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Project</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div> -->
+        </nav>
+        <div class="header-text">
+          <div class="div-text">
+            <h1>Hello, <br />I am Zikhona</h1>
+            <button class="btnn">Portfolio</button>
+          </div>
+          <div class="image">
+            <img src="picture22.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ----------------------------About---------------------- -->
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img class="imagee" src="Zikho.png" />
+            <a href=""> <button class="btn">Resume</button></a>
+            <!-- <a href="" class="btn">Resume</a> -->
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About <span>M</span>e</h1>
+            <p>
+              I am a software developer with a strong passion for building
+              innovative and user-friendly applications. My journey in software
+              development began with a keen interest in problem-solving and
+              technology. I have experience with HTML, CSS, and JavaScript, and
+              I enjoy creating intuitive user interfaces using modern libraries
+              and frameworks like React. During my academic journey and personal
+              projects, I've had the opportunity to collaborate with diverse
+              teams, which has sharpened my communication and teamwork skills. I
+              am always eager to learn new technologies and keep up with the
+              latest industry trends.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>HTML</span></li>
+                <li><span>CSS</span></li>
+                <li><span>Javascript</span></li>
+                <li><span>React</span></li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>JUL 2023 -current</span><br />Junior Softtware Dev.
+                  Company: Youngings
+                </li>
+                <li>
+                  <span>JAN 2023-JUN 2023</span><br />System Developer. Company:
+                  Cpaciti
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2016-2020</span><br />NDip Information Technology.
+                  Insitution: Walter Sisulu University
+                </li>
+                <li>
+                  <span>2013-2015</span><br />High School. School: St Patricks
+                  SSS
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------------------End About---------------------- -->
+
+    <!-- -------Project----- -->
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">P<span>r</span>ojects</h1>
+        <div class="projects-list">
+          <div>
+            <i class="fa-solid fa-school"></i>
+            <h2>Mzamomtsha Web</h2>
+            <a href="https://mzamomtsha-website-project.netlify.appq    1"
+              >View project</a
+            >
+          </div>
+          <div>
+            <i class="fa-solid fa-calculator"></i>
+            <h2>Calculator</h2>
+            <a href="#">View project</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-user"></i>
+            <h2>Portfolio</h2>
+            <a href="#">View project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------contact----------- -->
+    <div id="contact">
+      <div class="container">
+        <h1 class="sub-title">Contact <span>M</span>e</h1>
+        <div class="row">
+          <div class="contact-left">
+            <p><i class="fa-solid fa-phone-volume"></i>0987654321</p>
+            <!-- <p><i class="fa-regular fa-envelope"></i>contac@example.com</p> -->
+            <p><i class="fa-regular fa-envelope"></i>contac@example.com</p>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="contact-right"></div>
+          <form>
+            <p>Name</p>
+            <input type="text" name="Name" placeholder="Your Name" required />
+            <p>Email</p>
+            <input
+              type="email"
+              name="Email"
+              placeholder="Your Email"
+              required
+            />
+            <p>Message</p>
+            <textarea
+              name="Message"
+              rows="6"
+              placeholder="Your Message"
+            ></textarea>
+            <button type="submit" class="btn-s">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright © 2023 Zikhona. All rights reserved</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
