@@ -4,10 +4,19 @@
     padding: 0;
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
+    
 }
-
+/* .picture{
+    
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} */
 body {
-    background: #242333;
+    background-image: url("tree.jpg");
+    background-size: cover; /* Adjust to your preference */
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
     color: #fff;
     font-family: 'Poppins', sans-serif;
 }
@@ -44,7 +53,7 @@ html{
 
 
 nav {
-    background-color:#242333;
+    /* background-color:#242333; */
     position: fixed;
     top: 0;
     left: 0;
@@ -113,7 +122,7 @@ nav {
     .nav-list {
         display: none;
         flex-direction: column;
-        background-color: #201f30;
+        /* background-color: #201f30; */
         position: absolute;
         top: 60px;
         left: 0;
@@ -225,6 +234,10 @@ nav {
 }
 .about-col-2{
     flex-basis: 60%;
+    color: black;
+    font-weight: 700;
+    font-style: normal;
+
 
 }
 .sub-title span{
@@ -266,7 +279,7 @@ nav {
     margin: 10px 0;
 }
 .tab-contents ul li span{
-    color: #E7C6FF;
+    color: #DD2E18;
     font-size: 18px;
 }
 .tab-contents{
