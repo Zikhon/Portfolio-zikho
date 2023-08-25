@@ -16,9 +16,92 @@ function opentab(tabname) {
   for (tablink of tablinks) {
     tablink.classList.remove("active-link");
   }
-  for (tabcontent of tabcontents) {
-    tabcontent.classList.remove("active-tab");
+  for (tabcontents of tabcontents) {
+    tabcontents.classList.remove("active-tab");
   }
-  event.currentTarget.classList.add("active-link");
+  Event.currentTarget.classList.add("active-link");
   document.getElementById(tabname).classList.add("active-tab");
+}
+
+// VALIDATIONS
+document.getElementById('contact-right').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+
+  // Regular expressions for validation
+  const nameRegex = /^[A-Z][a-zA-Z]{1,19}$/;
+  const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
+
+  const nameInput = document.getElementById('Name');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('Message');
+
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const message = messageInput.value.trim();
+
+  // Check for empty fields
+  if (name === '') {
+    alert('Please write your name.');
+    return;
+  }
+  if (email === '') {
+    alert('Please write your name.');
+    return;
+  }
+  if (message === '') {
+    alert('Please write your message.');
+    return;
+  }
+
+  // Validate name, email, and message
+  if (!name.match(nameRegex)) {
+    alert('Write a correct name');
+    return;
+  }
+
+  if (!email.match(emailRegex)) {
+    alert('Email is invalid.');
+    return;
+  }
+
+  // Clear the form
+  nameInput.value = '';
+  emailInput.value = '';
+  messageInput.value = '';
+
+  alert('Form submitted successfully!');
+});
+
+
+// firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyDZyri2dTl3itXIbT3EkryddGE15ZWpVFg",
+  authDomain: "contactform-d1955.firebaseapp.com",
+  databaseURL: "https://contactform-d1955-default-rtdb.firebaseio.com",
+  projectId: "contactform-d1955",
+  storageBucket: "contactform-d1955.appspot.com",
+  messagingSenderId: "169490321850",
+  appId: "1:169490321850:web:52c5ef6cc329407e208d83"
+};
+// initialize firebase
+firebase.initializeApp(firebaseConfig);
+// const customAppName = 'contactForm'; // Change this to your desired custom name
+
+// const app = initializeApp(firebaseConfig, customAppName);
+
+// reference database
+var contactFormDB = firebase.database().ref('contactForm');
+document.getElementById('contactForm').addEventListener("submit", submitForm);
+function submitForm(e){
+  e.preventDefault();
+  var Name = getElementVal('Name');
+  var Email = getElementVal('Email');
+  var Message = getElementVal('Message');
+
+  console.log(Name, Email, Message);
+  
+}
+const getElementVal = (id) => {
+  return document.getElementById(id).value;
 }

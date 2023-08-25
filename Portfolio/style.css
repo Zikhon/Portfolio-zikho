@@ -388,10 +388,10 @@ form input, form textarea{
     width: 100%;
     border: 20px;
     outline: none;
-    background: #BBD0FF;
+    /* background: #BBD0FF; */
     padding: 15px;
     margin: 15px 0;
-    color: #4277FF;
+    /* color: #4277FF; */
     font-size: 18px;
     border-radius: 6px;
     
