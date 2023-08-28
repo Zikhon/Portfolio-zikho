@@ -148,24 +148,22 @@
 
         </div>
         <div class="contact-right">
-          <form>
+          <form id="contactForm">
             <label for="Name">Name</label>
-            <input name="Name" id="Name" type="text" autocomplete="family-name" />
-
+            <input name="Name" id="Name" type="text" autocomplete="family-name" required />
+            <!-- <span id="nameError" class="error-message"></span> -->
+        
             <label for="email">Email</label>
-            <input name="email" id="email" type="email" autocomplete="off" />
-            <!-- <p>Name</p>
-            <input type="text" name="Name" placeholder="Your Name" required />
-            <p>Email</p>
-            <input type="email" name="Email" placeholder="Your Email" required /> -->
+            <input name="email" id="email" type="email" autocomplete="off" required />
+            <!-- <span id="emailError" class="error-message"></span> -->
+        
             <label for="Message">Message</label>
-            <textarea id="Message" name="Message" rows="5" cols="33"></textarea>
+            <textarea id="Message" name="Message" rows="5" cols="33" required></textarea>
+            <!-- <span id="messageError" class="error-message"></span> -->
+        
             <button type="submit" class="btn-s">Submit</button>
-
           </form>
         </div>
-
-
       </div>
 
       <div class="social-icons">

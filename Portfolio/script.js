@@ -8,26 +8,7 @@
     });
   });
 
-// tab
-// var tablinks = document.getElementsByClassName("tab-links");
-// var tabcontents = document.getElementsByClassName("tab-contents");
-
-// for (var i = 0; i < tablinks.length; i++) {
-//   tablinks[i].addEventListener("click", function(event) {
-//     opentab(event.currentTarget.dataset.tabname);
-//   });
-// }
-
-// function opentab(tabname) {
-//   for (var i = 0; i < tablinks.length; i++) {
-//     tablinks[i].classList.remove("active-link");
-//   }
-//   for (var i = 0; i < tabcontents.length; i++) {
-//     tabcontents[i].classList.remove("active-tab");
-//   }
-//   Event.currentTarget.classList.add("active-link");
-//   document.getElementById(tabname).classList.add("active-tab");
-// }
+// tablinks
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -41,4 +22,35 @@ function opentab(tabname) {
   event.currentTarget.classList.add("active-link"); // "event" should be changed to "e"
   document.getElementById(tabname).classList.add("active-tab");
 }
+
+// form vaidation
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+  var nameField = document.getElementById("Name");
+  var emailField = document.getElementById("email");
+  var messageField = document.getElementById("Message");
+
+  var nameError = document.getElementById("nameError");
+  var emailError = document.getElementById("emailError");
+  var messageError = document.getElementById("messageError");
+
+  nameError.textContent = "";
+  emailError.textContent = "";
+  messageError.textContent = "";
+
+  if (nameField.value.trim() === "") {
+    nameError.textContent = "Please enter your name.";
+    event.preventDefault();
+  }
+
+  if (emailField.value.trim() === "") {
+    emailError.textContent = "Please enter your email.";
+    event.preventDefault();
+  }
+
+  if (messageField.value.trim() === "") {
+    messageError.textContent = "Please enter your message.";
+    event.preventDefault();
+  }
+});
+
 
