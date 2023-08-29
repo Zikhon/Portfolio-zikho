@@ -6,12 +6,7 @@
     box-sizing: border-box;
     
 }
-/* .picture{
-    
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-} */
+
 body {
     background-image: url("tree.jpg");
     background-size: cover; /* Adjust to your preference */
@@ -301,6 +296,7 @@ display: none;
     padding: 100px;
     height: 100vh;
     color: black;
+    /* background-image: url('spider-3533177_1280.jpg'); */
     
 
 }
