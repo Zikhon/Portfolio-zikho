@@ -141,24 +141,26 @@
       <h1 class="sub-title">Contact <span>M</span>e</h1>
       <div class="row">
         <div class="contact-left">
+          
           <p><i class="fa-solid fa-phone-volume"></i>072 032 1197</p>
           <p><i class="fa-regular fa-envelope"></i>zikhonamdingazwe@gmail.com</p>
           <p><i class="fa-regular fa-envelope"></i>zikhona.mdingazwe@younglings.africa</p>
 
 
         </div>
+        
         <div class="contact-right">
-          <form id="contactForm">
+          <form id="contactForm" onsubmit="return validateForm()">
             <label for="Name">Name</label>
-            <input name="Name" id="Name" type="text" autocomplete="family-name" required />
+            <input name="Name" id="Name" type="text" autocomplete="family-name"  />
             <!-- <span id="nameError" class="error-message"></span> -->
         
             <label for="email">Email</label>
-            <input name="email" id="email" type="email" autocomplete="off" required />
+            <input name="email" id="email" type="email" autocomplete="off"  />
             <!-- <span id="emailError" class="error-message"></span> -->
         
             <label for="Message">Message</label>
-            <textarea id="Message" name="Message" rows="5" cols="33" required></textarea>
+            <textarea id="Message" name="Message" rows="5" cols="33" ></textarea>
             <!-- <span id="messageError" class="error-message"></span> -->
         
             <button type="submit" class="btn-s">Submit</button>

@@ -24,33 +24,7 @@ function opentab(tabname) {
 }
 
 // form vaidation
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-  var nameField = document.getElementById("Name");
-  var emailField = document.getElementById("email");
-  var messageField = document.getElementById("Message");
 
-  var nameError = document.getElementById("nameError");
-  var emailError = document.getElementById("emailError");
-  var messageError = document.getElementById("messageError");
 
-  nameError.textContent = "";
-  emailError.textContent = "";
-  messageError.textContent = "";
-
-  if (nameField.value.trim() === "") {
-    nameError.textContent = "Please enter your name.";
-    event.preventDefault();
-  }
-
-  if (emailField.value.trim() === "") {
-    emailError.textContent = "Please enter your email.";
-    event.preventDefault();
-  }
-
-  if (messageField.value.trim() === "") {
-    messageError.textContent = "Please enter your message.";
-    event.preventDefault();
-  }
-});
 
 

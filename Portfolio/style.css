@@ -69,13 +69,17 @@ nav {
     align-items: center;
     padding: 20px;
     /* margin-left: 130vh; */
+    background-color: rgba(0, 0, 0, 0.1);   
+    /* background-color: #8c8c91; */
+    /* opacity: 0.5; */
     
-    
+   
 }
 
 .nav-list {
     list-style: none;
     display: flex;
+    
 }
 
 .nav-list li {
@@ -122,7 +126,9 @@ nav {
     .nav-list {
         display: none;
         flex-direction: column;
-        /* background-color: #201f30; */
+        /* background-color: #8c8c91; */
+        background-color: rgba(0, 0, 0, 0.1);   
+
         position: absolute;
         top: 60px;
         left: 0;
@@ -142,6 +148,7 @@ nav {
         justify-content: space-between;
         padding: 20px;
         margin-left: 85vh;
+        
     }
     .image img {
         width: 50vh;
@@ -331,6 +338,21 @@ display: none;
 .projects-list div:hover{
     background-color: #DD2E18;
     transform: translateY(-10px);
+    @media (max-width: 768px) {
+        .projects-list {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+    
+        .projects-list div {
+          text-align: center;
+        }
+    
+        .projects-list i {
+          font-size: 24px;
+        }
+      }
 }
 /* -------Contact-------- */
 #contact{
@@ -423,13 +445,20 @@ form input, form textarea{
     /* margin-top: 20px; */
     
 }
-/* #msg{
-    color: #DD2E18;
-    margin-top: -20px;
-    display: flex;
-    width: 150px;
-    padding: 14px 60px;
-} */
+@media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+
+    .contact-left,
+    .contact-right {
+      width: 100%;
+    }
+
+    .social-icons {
+      text-align: center;
+    }
+  }
 
 
 
