@@ -2,21 +2,32 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'poppins', sans-serif;
+    font-family:  Arial, sans-serif;
     box-sizing: border-box;
-    
 }
+
 
 body {
     background-image: url("tree.jpg");
     background-size: cover; /* Adjust to your preference */
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    width: 100%;
     color: #fff;
     font-family: 'Poppins', sans-serif;
-}
-html{
-    scroll-behavior: smooth;
+
+/* mobile */
+    @media (max-width:480px) {
+        
+    }
+
+
+    @media (min-width:481px) and (max-width: 767px) {
+        
+    }
+
+    @media (min-width:481px) and (max-width: 767px) {
+        
+    }
 }
 #header {
     width: 100%;
@@ -41,9 +52,8 @@ html{
 
 .container {
     padding:0 10%;
-}
-.container nav ul li a {
- object-position: 10%;
+    width: 100vw;
+    height: 100vh;
 }
 
 
@@ -117,11 +127,10 @@ nav {
     margin: 3px 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .nav-list {
         display: none;
         flex-direction: column;
-        /* background-color: #8c8c91; */
         background-color: rgba(0, 0, 0, 0.1);   
 
         position: absolute;
@@ -293,7 +302,7 @@ display: none;
 }
 /* ------projects------ */
 #projects{
-    padding: 100px;
+    padding: 130px;
     height: 100vh;
     color: black;
     /* background-image: url('spider-3533177_1280.jpg'); */
@@ -305,13 +314,12 @@ display: none;
 }
 .projects-list{
     display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 25%;
-    margin-top: 50px;
+    grid-gap: 10%;
+    margin-top: 65px;
 }
 .projects-list div{
     background: #4277FF;
-    padding: 40px;
+    padding: 10px;
     font-size: 13px;
     font-weight: 300;
     color: #E7C6FF;
@@ -319,9 +327,12 @@ display: none;
     transition: background 0.5s, transform 0.5s;
 
 }
-.projects-list div i{
-    font-size: 60px;
-    margin-bottom: 15px;
+.projects-list div button{
+    font-size: 20px;
+    border-radius: 20%;
+    border: none;
+    background-color: #4277FF;
+    color: #E7C6FF;
    
 }
 .projects-list div a{
@@ -335,7 +346,8 @@ display: none;
 .projects-list div:hover{
     background-color: #DD2E18;
     transform: translateY(-10px);
-    @media (max-width: 768px) {
+    
+    @media (max-width: 480px) {
         .projects-list {
           display: grid;
           grid-template-columns: 1fr;
@@ -351,6 +363,11 @@ display: none;
         }
       }
 }
+.projects-list h2{
+    text-align: center;
+
+}
+
 /* -------Contact-------- */
 #contact{
     padding: 50px;
@@ -363,22 +380,22 @@ display: none;
 line-height: 10vh;
 font-size: 30px;
 }
-.contact-right{
+/* .contact-right{
     flex-basis: 60%;
     
-}
-.contact-right p{
+} */
+/* .contact-right p{
     margin-top: 30px;
 
-}
-.contact-left p i{
+} */
+.contactForm p i{
     color: #DD2E18;
     margin-right: 15px;
     font-size: 25px;
     transition: transform 0.5s;
 }
 
-.contact-left p i:hover{
+.contactForm p i:hover{
     color: #4277FF;
     transform: translateY(-5px);
 }
@@ -400,9 +417,9 @@ font-size: 30px;
     color: #4277FF;
     transform: translateY(-5px);
 }
-.contact-right form{
+/* .contact-right form{
     width: 100%;
-}
+} */
 form input, form textarea{
     width: 100%;
     border: 20px;
@@ -413,6 +430,7 @@ form input, form textarea{
     /* color: #4277FF; */
     font-size: 18px;
     border-radius: 6px;
+    align-items: center;
     
 }
 .btn-s{
@@ -427,8 +445,8 @@ form input, form textarea{
     font-style: normal;
     font-weight: 700;
     line-height: normal; 
-    display: inline-block
-    padding 14px 60px;
+    display: inline-block;
+    padding: 14px 60px;
     cursor: pointer;
     margin-top: 20px;
 }
@@ -447,7 +465,7 @@ form input, form textarea{
       flex-direction: column;
     }
 
-    .contact-left,
+    .contactForm,
     .contact-right {
       width: 100%;
     }
