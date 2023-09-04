@@ -11,11 +11,9 @@
 </head>
 
 <body>
-  <!-- <div class="picture">
-    <img src="Portfolio/tree.jpg" alt="">
-  </div> -->
+  <section>
+  <div class="container">
   <div id="header">
-    <div class="container">
       <nav class="navbar">
         <div class="toggle-button">
           <div class="bar"></div>
@@ -41,18 +39,16 @@
       </div>
     </div>
   </div>
-
+</section>
   <!-- ----------------------------About---------------------- -->
-
+<section>
   <div id="about">
-    <div class="container">
       <div class="row">
         <div class="about-col-1">
           <img class="imagee" src="Zikho.png" />
           <a href="rainy.jpg" download>
             <button class="btn">Resume</button>
           </a>
-          <!-- <a href="" class="btn">Resume</a> -->
         </div>
         <div class="about-col-2">
           <h1 class="sub-title">About <span>M</span>e</h1>
@@ -68,7 +64,7 @@
             am always eager to learn new technologies and keep up with the
             latest industry trends.
           </p>
-          <div class="tab-titles">
+       <div class="tab-titles">
             <p class="tab-links active-link" onclick="opentab('skills')">
               Skills
             </p>
@@ -113,78 +109,66 @@
       </div>
     </div>
   </div>
+</section>
   <!-- ----------------------------End About---------------------- -->
 
   <!-- -------Project----- -->
-  <div id="projects">
-    <div class="container">
-      <h1 class="sub-title">P<span>r</span>ojects</h1>
-      <div class="projects-list">
-        <div>
-          <i class="fa-solid fa-school"></i>
-          <h2>Mzamomtsha Web</h2>
-          <a href="https://mzamomtsha-website-project.netlify.appq    1">View project</a>
-        </div>
-        <div>
-          <i class="fa-solid fa-calculator"></i>
-          <h2>Calculator</h2>
-          <a href="#">View project</a>
-        </div>
-        <div>
-          <i class="fa-solid fa-user"></i>
-          <h2>Portfolio</h2>
-          <a href="#">View project</a>
+  <section>
+    <div id="projects">
+        <h1 class="sub-title">P<span>r</span>ojects</h1>
+        <div class="projects-list">
+          <div>
+            <h2>Mzamomtsha Web</h2>
+            <img class="image" src="learners.jpg"><br>
+            <button onclick="window.location.href='https://super-quokka-c5659f.netlify.app/'">View</button>
+          </div>
+          <div>
+            <h2>Calculator</h2>
+            <img class="image" src="learners.jpg"><br>
+            <button onclick="window.location.href='https://github.com/Zikhon/Calculator'">View</button>
+          </div>
+          <div>
+            <h2>Portfolio</h2>
+            <img class="image" src="learners.jpg"><br>
+            <button onclick="window.location.href='https://github.com/Zikhon/Portfolio-zikho'">View</button>
+  
+  
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- -------------contact----------- -->
+<section>
   <div id="contact">
-    <div class="container">
       <h1 class="sub-title">Contact <span>M</span>e</h1>
-      <div class="row">
-        <div class="contact-left">
-          <p><i class="fa-solid fa-phone-volume"></i>072 032 1197</p>
-          <p><i class="fa-regular fa-envelope"></i>zikhonamdingazwe@gmail.com</p>
-          <p><i class="fa-regular fa-envelope"></i>zikhona.mdingazwe@younglings.africa</p>
-
-
-        </div>
         <div class="contact-right">
-          <form>
+          <form action="" class="contac-form" id="contact-form">
             <label for="Name">Name</label>
             <input name="Name" id="Name" type="text" autocomplete="family-name" />
-
             <label for="email">Email</label>
             <input name="email" id="email" type="email" autocomplete="off" />
-            <!-- <p>Name</p>
-            <input type="text" name="Name" placeholder="Your Name" required />
-            <p>Email</p>
-            <input type="email" name="Email" placeholder="Your Email" required /> -->
             <label for="Message">Message</label>
             <textarea id="Message" name="Message" rows="5" cols="33"></textarea>
+            <p class="contact_message" id="contact-message"></p>
             <button type="submit" class="btn-s">Submit</button>
 
           </form>
         </div>
-
-
-      </div>
+  </div>
 
       <div class="social-icons">
         <a href="https://github.com/Zikhon"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/zikhona-zimi-46b605253/"><i class="fa-brands fa-linkedin"></i></a>
       </div>
-      <!-- <span id="msg">Message sent</span> -->
-    </div>
-
-  </div>
-
+</section>
+ <section>
   <div class="copyright">
     <p>Copyright © 2023 Zikhona. All rights reserved</p>
   </div>
-  <script src="http://cdnjs.coudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+</section>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 

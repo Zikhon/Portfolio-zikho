@@ -16,62 +16,91 @@ function opentab(tabname) {
   for (tablink of tablinks) {
     tablink.classList.remove("active-link");
   }
-  for (tabcontents of tabcontents) {
-    tabcontents.classList.remove("active-tab");
+  for (tabcontent of tabcontents) {
+    tabcontent.classList.remove("active-tab");
   }
-  Event.currentTarget.classList.add("active-link");
+  event.currentTarget.classList.add("active-link"); // "event" should be changed to "e"
   document.getElementById(tabname).classList.add("active-tab");
 }
 
 // VALIDATIONS
-document.getElementById('contact-right').addEventListener('submit', function(event) {
-  event.preventDefault();
+
+// Send email
+const contactForm = document.getElementById('contact-form'),
+contactMessage = document.getElementById('contact-message')
+
+const sendEmail = (e) =>{
+  e.preventDefault()
+
+  // !serviceID - tempateID - #form - publicKey
+  emailjs.sendForm('service_q4xlmta','template_8uaa6es','#contact-form','6jwNjtbKASDAEivwJ')
+  .then((result) =>{
+    contactMessage.textContent = 'Message sent successfully'
+
+    setTimeout(() => {
+      contactMessage.textContent = ''
+    }, 5000)
+    contactForm.reset()
+
+  }, ()=> {
+    contactMessage.textContent = 'Error sending message'
+    setTimeout(() => {
+      contactMessage.textContent = ''
+    }, 5000)
+  })
+}
+contactForm.addEventListener('submit', sendEmail)
 
 
-  // Regular expressions for validation
-  const nameRegex = /^[A-Z][a-zA-Z]{1,19}$/;
-  const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
 
-  const nameInput = document.getElementById('Name');
-  const emailInput = document.getElementById('email');
-  const messageInput = document.getElementById('Message');
+// document.getElementById('contact-right').addEventListener('submit', function(event) {
+//   event.preventDefault();
 
-  const name = nameInput.value.trim();
-  const email = emailInput.value.trim();
-  const message = messageInput.value.trim();
 
-  // Check for empty fields
-  if (name === '') {
-    alert('Please write your name.');
-    return;
-  }
-  if (email === '') {
-    alert('Please write your name.');
-    return;
-  }
-  if (message === '') {
-    alert('Please write your message.');
-    return;
-  }
+//   // Regular expressions for validation
+//   const nameRegex = /^[A-Z][a-zA-Z]{1,19}$/;
+//   const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
 
-  // Validate name, email, and message
-  if (!name.match(nameRegex)) {
-    alert('Write a correct name');
-    return;
-  }
+//   const nameInput = document.getElementById('Name');
+//   const emailInput = document.getElementById('email');
+//   const messageInput = document.getElementById('Message');
 
-  if (!email.match(emailRegex)) {
-    alert('Email is invalid.');
-    return;
-  }
+//   const name = nameInput.value.trim();
+//   const email = emailInput.value.trim();
+//   const message = messageInput.value.trim();
 
-  // Clear the form
-  nameInput.value = '';
-  emailInput.value = '';
-  messageInput.value = '';
+//   // Check for empty fields
+//   if (name === '') {
+//     alert('Please write your name.');
+//     return;
+//   }
+//   if (email === '') {
+//     alert('Please write your name.');
+//     return;
+//   }
+//   if (message === '') {
+//     alert('Please write your message.');
+//     return;
+//   }
 
-  alert('Form submitted successfully!');
-});
+//   // Validate name, email, and message
+//   if (!name.match(nameRegex)) {
+//     alert('Write a correct name');
+//     return;
+//   }
+
+//   if (!email.match(emailRegex)) {
+//     alert('Email is invalid.');
+//     return;
+//   }
+
+//   // Clear the form
+//   nameInput.value = '';
+//   emailInput.value = '';
+//   messageInput.value = '';
+
+//   alert('Form submitted successfully!');
+// });
 
 
 // firebase
