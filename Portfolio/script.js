@@ -8,7 +8,7 @@
     });
   });
 
-// tab
+// tablinks
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -23,6 +23,7 @@ function opentab(tabname) {
   document.getElementById(tabname).classList.add("active-tab");
 }
 
+<<<<<<< HEAD
 // VALIDATIONS
 
 // Send email
@@ -50,8 +51,13 @@ const sendEmail = (e) =>{
   })
 }
 contactForm.addEventListener('submit', sendEmail)
+=======
+>>>>>>> f0a1fff39151d5aebe21baf2581807d3647f7cb4
 
+// -------------
+const form = document.getElementById('contactForm');
 
+<<<<<<< HEAD
 
 // document.getElementById('contact-right').addEventListener('submit', function(event) {
 //   event.preventDefault();
@@ -104,33 +110,42 @@ contactForm.addEventListener('submit', sendEmail)
 
 
 // firebase
+=======
+>>>>>>> f0a1fff39151d5aebe21baf2581807d3647f7cb4
 const firebaseConfig = {
-  apiKey: "AIzaSyDZyri2dTl3itXIbT3EkryddGE15ZWpVFg",
-  authDomain: "contactform-d1955.firebaseapp.com",
-  databaseURL: "https://contactform-d1955-default-rtdb.firebaseio.com",
-  projectId: "contactform-d1955",
-  storageBucket: "contactform-d1955.appspot.com",
-  messagingSenderId: "169490321850",
-  appId: "1:169490321850:web:52c5ef6cc329407e208d83"
+  apiKey: "AIzaSyBEYrN9dol_LMFsYBPrywpUB2Y2hGQdeVs",
+  authDomain: "contactform-f519b.firebaseapp.com",
+  databaseURL: "https://contactform-f519b-default-rtdb.firebaseio.com",
+  projectId: "contactform-f519b",
+  storageBucket: "contactform-f519b.appspot.com",
+  messagingSenderId: "254708467459",
+  appId: "1:254708467459:web:a1e8642b66825803d94b36",
+  measurementId: "G-R1XZSR6884"
 };
-// initialize firebase
+
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-// const customAppName = 'contactForm'; // Change this to your desired custom name
+const database = firebase.database()
 
-// const app = initializeApp(firebaseConfig, customAppName);
+const ref = database.ref("message")
 
-// reference database
-var contactFormDB = firebase.database().ref('contactForm');
-document.getElementById('contactForm').addEventListener("submit", submitForm);
-function submitForm(e){
+form.addEventListener("submit",(e)=>{
   e.preventDefault();
-  var Name = getElementVal('Name');
-  var Email = getElementVal('Email');
-  var Message = getElementVal('Message');
+  // console.log("form submitted");
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+//  console.log(name, email,message);
 
-  console.log(Name, Email, Message);
-  
-}
-const getElementVal = (id) => {
-  return document.getElementById(id).value;
-}
+ref.push({
+  name:name,
+  email:email,
+  message:message
+
+})
+ form.reset();
+//  window.confirm("Message sent successfully")
+
+
+
+})
