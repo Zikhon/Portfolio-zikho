@@ -56,6 +56,41 @@ contactForm.addEventListener('submit', sendEmail)
 // -------------
 const form = document.getElementById('contactForm');
 
+
+
+// SCROLL
+document.addEventListener('DOMContentLoaded', function () {
+  const links = document.querySelectorAll('ul.nav-list li a');
+
+  links.forEach((link) => {
+      link.addEventListener('click', smoothScroll);
+  });
+
+  function smoothScroll(e) {
+      e.preventDefault();
+      const targetId = e.target.getAttribute('href').slice(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetId === '') {
+          // If the target is empty (i.e., "Home"), scroll to the top
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth',
+          });
+      } else {
+          // Scroll to the target section
+          window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: 'smooth',
+          });
+      }
+  }
+});
+
+
+
+
+
 // document.getElementById('contact-right').addEventListener('submit', function(event) {
 //   event.preventDefault();
 
