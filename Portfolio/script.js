@@ -23,7 +23,7 @@ function opentab(tabname) {
   document.getElementById(tabname).classList.add("active-tab");
 }
 
-<<<<<<< HEAD
+
 // VALIDATIONS
 
 // Send email
@@ -33,7 +33,7 @@ contactMessage = document.getElementById('contact-message')
 const sendEmail = (e) =>{
   e.preventDefault()
 
-  // !serviceID - tempateID - #form - publicKey
+  //serviceID - tempateID - #form - publicKey
   emailjs.sendForm('service_q4xlmta','template_8uaa6es','#contact-form','6jwNjtbKASDAEivwJ')
   .then((result) =>{
     contactMessage.textContent = 'Message sent successfully'
@@ -51,13 +51,10 @@ const sendEmail = (e) =>{
   })
 }
 contactForm.addEventListener('submit', sendEmail)
-=======
->>>>>>> f0a1fff39151d5aebe21baf2581807d3647f7cb4
+
 
 // -------------
 const form = document.getElementById('contactForm');
-
-<<<<<<< HEAD
 
 // document.getElementById('contact-right').addEventListener('submit', function(event) {
 //   event.preventDefault();
@@ -110,8 +107,6 @@ const form = document.getElementById('contactForm');
 
 
 // firebase
-=======
->>>>>>> f0a1fff39151d5aebe21baf2581807d3647f7cb4
 const firebaseConfig = {
   apiKey: "AIzaSyBEYrN9dol_LMFsYBPrywpUB2Y2hGQdeVs",
   authDomain: "contactform-f519b.firebaseapp.com",
