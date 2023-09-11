@@ -42,6 +42,7 @@
   </section>
   <!-- ----------------------------About---------------------- -->
   <section>
+    <div class="container">
     <div id="about">
       <div class="row">
         <div class="about-col-1">
@@ -114,6 +115,7 @@
 
   <!-- -------Project----- -->
   <section>
+    <div class="container">
     <div id="projects">
       <h1 class="sub-title">P<span>r</span>ojects</h1>
       <div class="projects-list">
@@ -141,16 +143,17 @@
 
   <!-- -------------contact----------- -->
   <section>
+    <div class="container">
     <div id="contact">
       <h1 class="sub-title">Contact <span>M</span>e</h1>
       <div class="contact-right">
         <form action="" class="contac-form" id="contact-form">
           <label for="Name">Name</label>
-          <input name="Name" id="Name" type="text" autocomplete="family-name" />
+          <input name="Name" id="Name" type="text" autocomplete="family-name" required />
           <label for="email">Email</label>
-          <input name="email" id="email" type="email" autocomplete="off" />
+          <input name="email" id="email" type="email" autocomplete="on" required />
           <label for="Message">Message</label>
-          <textarea id="Message" name="Message" rows="5" cols="33"></textarea>
+          <textarea id="Message" name="Message" rows="5" cols="33" required ></textarea>
           <p class="contact_message" id="contact-message"></p>
           <button type="submit" class="btn-s">Submit</button>
 
@@ -162,11 +165,14 @@
       <a href="https://github.com/Zikhon"><i class="fa-brands fa-github"></i></a>
       <a href="https://www.linkedin.com/in/zikhona-zimi-46b605253/"><i class="fa-brands fa-linkedin"></i></a>
     </div>
+  </div>
   </section>
   <section>
+    <div class="container">
     <div class="copyright">
       <p>Copyright © 2023 Zikhona. All rights reserved</p>
     </div>
+  </div>
   </section>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="script.js"></script>
