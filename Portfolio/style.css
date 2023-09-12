@@ -319,6 +319,7 @@ display: none;
 }
 .project_container{
 grid-template-columns: repeat(3, 200px);
+
 }
 
 .sub-title{
@@ -338,6 +339,9 @@ grid-template-columns: repeat(3, 200px);
     background-color: transparent;
     perspective: 1000px;
     margin-bottom: 32rem;
+    display: flex;
+    /* position: column; */
+    flex-direction: column;
   }
   
   .flip-card-inner {
@@ -348,6 +352,7 @@ grid-template-columns: repeat(3, 200px);
     transition: transform 3s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  
   }
   
   .flip-card:hover .flip-card-inner {
@@ -366,6 +371,7 @@ grid-template-columns: repeat(3, 200px);
     box-shadow: #000;
     width: 20rem;
     height: 30rem;
+    display: grid;
   }
   
   .flip-card-front {
@@ -393,7 +399,7 @@ grid-template-columns: repeat(3, 200px);
     display: block;
     width: 200px;
     height: 200px;
-    margin: 0 auto 30px;
+    /* margin: 0 auto 30px; */
     border-radius: 2%;
     background-color: rgb(59, 59, 59);
     /* border: 5px solid rgb(88, 85, 85); */
