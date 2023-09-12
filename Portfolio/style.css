@@ -17,7 +17,7 @@ html{
     scroll-behavior: initial;
 }
 /* Responsive styles for screen width <= 480px */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     body{
         width: 100%;
     }
@@ -25,7 +25,7 @@ html{
         width: 100%;
         display: flex;
     }
-    *{
+    
         margin: 0;
         box-sizing: border-box ;
     }
@@ -33,6 +33,12 @@ html{
         width: 100%;
     }
 
+} */
+@media only screen and (max-width: 400px) {
+   .container{
+    Height: 90%;
+    Width: 90%;
+   }
 }
 /* Responsive styles for screen width between 481px and 767px */
 @media (min-width: 481px) and (max-width: 767px) {
@@ -311,53 +317,100 @@ display: none;
     color: black;
     margin-bottom: 100px;
 }
+.project_container{
+grid-template-columns: repeat(3, 200px);
+}
 
 .sub-title{
     text-align: center;
 }
-.projects-list{
-    display: flex;
-    margin-top: 65px;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-
-}
-.projects-list div{
-    justify-content: space-between;
-    background: #4277FF;
-    padding: 10px;
-    font-size: 13px;
-    font-weight: 300;
-    color: #E7C6FF;
-    border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
-
-}
-.projects-list div button{
-    font-size: 20px;
-    border-radius: 20%;
-    border: none;
-    background-color: #4277FF;
-    color: #E7C6FF;
-   
-}
-.projects-list div a{
-    font-size: 15px;
-    font-weight: 300;
-    margin-bottom: 15px;
-    margin-top: 10px;
-    text-decoration: none;
-    display: inline-block;
-}
-.projects-list div:hover{
-    background-color: #DD2E18;
-    transform: translateY(-10px);
-}
-.projects-list h2{
+.flip-card-front p {
+    text-align: left;
+    font-weight: 600;
+    color: white;
+    padding-left: 10px;
+    padding-right: 5px;
+  
+  
+  }
+  
+  .flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    margin-bottom: 32rem;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
     text-align: center;
-
-}
+    transition: transform 3s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* border: 2px solid #132e7a; */
+    border-radius: 12px;
+    box-shadow: #000;
+    width: 20rem;
+    height: 30rem;
+  }
+  
+  .flip-card-front {
+    background: rgba(0, 0, 0, 0.5);
+    /* background-image: linear-gradient(rgb(218, 216, 216), rgb(105, 105, 105)); */
+    color: white;
+  }
+  
+  .flip-card-front p {
+    margin: 20px;
+  }
+  
+  .flip-card-back {
+    background: black;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-back p {
+    margin-top: 20px;
+    font-size: larger;
+  }
+  
+  .flip-card-front img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 30px;
+    border-radius: 2%;
+    background-color: rgb(59, 59, 59);
+    /* border: 5px solid rgb(88, 85, 85); */
+    object-fit: cover;
+  }
+  .flip-card-front h2 {
+    margin-top: 10px;
+  }
+  
+  .mySlides {
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 20rem;
+    height: 30rem;
+  }
 /* -------Contact-------- */
 #contact{
     padding: 100px;
