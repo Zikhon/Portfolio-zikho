@@ -4,6 +4,7 @@
     padding: 0;
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;  
+   
 }
 body {
     background-image: url("tree.jpg");
@@ -17,7 +18,7 @@ html{
     scroll-behavior: initial;
 }
 /* Responsive styles for screen width <= 480px */
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
     body{
         width: 100%;
     }
@@ -25,15 +26,12 @@ html{
         width: 100%;
         display: flex;
     }
-    
-        margin: 0;
-        box-sizing: border-box ;
-    }
+   
     .container{
         width: 100%;
     }
 
-} */
+}
 @media only screen and (max-width: 400px) {
    .container{
     Height: 90%;
@@ -94,28 +92,36 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;   
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.1);
 }
+
 .navbar {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.1);    
 }
+
 .nav-list {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
+
 .nav-list li {
     margin: 0 20px;
     position: relative;
 }
+
 .nav-list li a {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
+    position: relative;
 }
+
 .nav-list li a::after {
     content: '';
     width: 0;
@@ -124,16 +130,15 @@ nav {
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 0.5s;
+    transition: width 0.5s;
 }
 
 .nav-list li a:hover::after {
     width: 100%;
 }
 
-
 /* Hamburger menu */
-.toggle-button{
+.toggle-button {
     display: none;
     flex-direction: column;
     cursor: pointer;
@@ -150,42 +155,52 @@ nav {
     .nav-list {
         display: none;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.1); 
+        background-color: rgba(0, 0, 0, 0.1);
         position: absolute;
         top: 60px;
-        left: 0;
-        width: 80%;
+        left: 0; 
+        right: 0; 
+        width: 0;
     }
 
     .nav-list.active {
         display: flex;
-        flex-direction: column;
     }
 
     .toggle-button {
         display: flex;
+        align-items: flex-start;
+        justify-content: flex-end; 
     }
 
     .navbar {
         justify-content: space-between;
         padding: 20px;
-        margin-left: 85vh;
-    }
-    .image img {
-        width: 50vh;
-        
-    }
-    .sub-title{
-        font-size: 40px;
-    }
-    .about-col-1, .about-col-2{
-        flex-basis: 100%;
-    }
-    .about-col-1{
-        flex-basis: 30px;
+        margin-left: 0;
     }
 
+    .image img {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        flex-basis: 30px;
+    }
 }
+
+
+
+
 .div-text {
     margin-left: 10%;
     margin-top: 8%;
@@ -320,48 +335,68 @@ display: none;
 }
 
 .sub-title{
-    text-align: center;
+    text-align: center; 
+    top: 20px; /* Adjust the top position as needed */
+    left: 0;
+    right: 0;
+    
 }
-.project-container{
+ 
+
+.project-container {
+    display: inline-block;
+    margin-right: 20px; /* Adjust the margin as needed for spacing */
+}
+
+.card-container {
+    width: 50vh;
+    height: 40vh;
+    perspective: 1000px; /* Adding perspective for 3D effect */
+    margin-left: 2vh;
+
+  }
+
+.card {
     position: relative;
-    width: 250px;
-    height: 323px;
-    perspective: 1000px;
-    grid-template-columns: repeat(3, 1fr);
-}
-.projects{
-    position: absolute;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.8s ease;
     transform-origin: center;
-    /* background: red;  */
-    display: grid;
-     
-    gap: 20px;
+    cursor: pointer;
+    margin-left: 3vh;
+
 
 }
-.picture{
-position: absolute;
-width: 100%;
-height: 100%;
-backface-visibility: hidden;
-background: white;
-color: black;
+
+.card:hover {
+    transform: rotateY(180deg);
 }
-.explanation{
+
+.picture-container {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    background-size: 100% 100%;
+    border-radius: 8px;
+}
+
+.explanation-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background: rgb(216, 100, 100);
-    color: black;
+    backface-visibility: hidden;
     transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
 }
-.projects:hover{
-    transform: rotateY(180deg);
-}
+
 /* -------Contact-------- */
 #contact{
     padding: 100px;
