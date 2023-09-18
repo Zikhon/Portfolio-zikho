@@ -4,6 +4,7 @@
     padding: 0;
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;  
+  
    
 }
 body {
@@ -17,51 +18,6 @@ body {
 html{
     scroll-behavior: initial;
 }
-/* Responsive styles for screen width <= 480px */
-@media (max-width: 480px) {
-    body{
-        width: 100%;
-    }
-    section{
-        width: 100%;
-        display: flex;
-    }
-   
-    .container{
-        width: 100%;
-    }
-
-}
-@media only screen and (max-width: 400px) {
-   .container{
-    Height: 90%;
-    Width: 90%;
-   }
-}
-/* Responsive styles for screen width between 481px and 767px */
-@media (min-width: 481px) and (max-width: 767px) {
-  
-}
-
-/* Responsive styles for screen width between 768px and 991px */
-@media (min-width: 768px) and (max-width: 991px) {
-
-}
-
-/* Responsive styles for screen width between 992px and 1199px */
-@media (min-width: 992px) and (max-width: 1199px) {
-  
-}
-
-/* Responsive styles for screen width between 1200px and 1919px */
-@media (min-width: 1200px) and (max-width: 1919px) {
-  
-}
-
-/* Responsive styles for screen width >= 1920px */
-@media (min-width: 1920px) {
-  
-}
 .container {
     width: 100%;
     height: 100%;
@@ -69,11 +25,12 @@ html{
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    /* overflow: hidden; */
 }
 #header {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background-size: cover;
     background-position: center;
     position: sticky;
@@ -81,6 +38,7 @@ html{
 .header-text {
     display: flex;
     justify-content: space-between;
+    
 }
  .image img {
     width: 100%;
@@ -155,7 +113,7 @@ nav {
     .nav-list {
         display: none;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.1);
+        /* background-color: rgba(0, 0, 0, 0.1); */
         position: absolute;
         top: 60px;
         left: 0; 
@@ -233,6 +191,7 @@ nav {
 #about {
     padding: 80px 0;
     color: #fff;
+    height: 100vh;
 }
 .btn {
     background: #DD2E18;
@@ -474,35 +433,162 @@ align-items: start;
 }
 /* Responsive styles for screen width <= 480px */
 @media (max-width: 480px) {
-    .copyright{
-        width: 100%;
-        text-align: center;
-    }
-    .btn-s{
-        width: 100px;
+/* ----------------------HOME------------------------- */
+section {
+    width: 100%;
+    display: flex;
+}
+#header{
+    height: 98vh;
+}
+.header-text {
+    flex-direction: column-reverse; /* Change direction for smaller screens */
+}
+.image img {
+    padding: 50px; /* Reduced padding for smaller screens */
+}
+.navbar {
+    z-index: 1; /* Ensure it's above other content */
+    /* background-color: rgba(0, 0, 0, 0.7); */
+}
+.nav-list {
+    flex-direction: column;
+}
+.nav-list.active {
+    width: 100%; /* Show menu on click */
+}
+.div-text {
+    margin-left: 0; /* Adjusted margin for smaller screens */
+    margin-top: 8%;
+    text-align: center; /* Centered text for smaller screens */
+}
 
-    }
-    .social-icons{
-        display: flex;
-        justify-content: center;
-    }
-    form{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        width: 80%;
-    }
-    #contact{
-        width: 100%;
-        padding: 100px;
-    }
-    form input, form textarea{
-        width: 100%;
-    }
+.btnn {
+    margin-top: 20px; /* Adjusted margin for smaller screens */
+    height: 50px; /* Reduced button height for smaller screens */
+    width: 150px; /* Reduced button width for smaller screens */
+    font-size: 25px; /* Adjusted font size for smaller screens */
+}
 
+.header-text h1 {
+    font-size: 60px; /* Adjusted font size for smaller screens */
+    margin-top: 10px; /* Adjusted margin for smaller screens */
+}
+/* --------------------ABOUT--------------------------- */
+#about {
+    padding: 40px 0; /* Example: Reduced padding for mobile screens */
+}
+
+.btn {
+    width: 30%;
+    font-size: 20px; /* Example: Reduced font size for buttons */
+}
+.row {
+    flex-direction: column; /* Stack columns vertically on mobile screens */
+}
+.about-col-1 {
+    margin-right: 0;
+    flex: 100%; /* Example: Full width for column on mobile screens */
+    margin-left: 0; /* Example: No left margin on mobile screens */
+    margin-bottom: 10px; /* Example: Reduced bottom margin for mobile screens */
+}
+.about-col-1 .img {
+    margin-right: 0; /* Remove right margin on mobile screens */
+}
+.about-col-2 {
+
+    flex-basis: 100%; /* Example: Full width for column on mobile screens */
+    margin-right: 0; /* Example: No right margin on mobile screens */
+}
+.sub-title {
+    font-size: 40px;
+    margin: 5% 0;
+}
+.tab-links {
+    margin-right: 20px; /* Example: Reduced right margin for tab links on mobile screens */
+}
+/* --------------------------------PROJECTS-------------------------- */
+#projects {
+    padding: 50px;
+    margin-bottom: 50px;
+    margin-top: 90%;
+  }
+
+  .sub-title {
+    top: 10px;
+  }
+
+  .project-container {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .card-container {
+    width: 100%;
+    height: 30vh;
+    margin-left: 0;
+  }
+
+  .card {
+    margin-left: 0;
+  }
+  /* --------------------------------CONTACT--------------------------- */
+  #contact {
+    padding: 20px; /* Adjust the padding for smaller screens */
+}
+
+form {
+    width: 100%; /* Make the form full width for smaller screens */
+}
+
+.social-icons {
+    margin-top: 20px; /* Adjust margin-top for smaller screens */
+}
 }
 /* Responsive styles for screen width between 481px and 767px */
 @media (min-width: 481px) and (max-width: 767px) {
+    /* ----------------------HOME------------------------- */
+section {
+    width: 100%;
+    display: flex;
+}
+#header{
+    height: 50vh;
+}
+.header-text {
+    flex-direction: column-reverse; /* Change direction for smaller screens */
+}
+.image img {
+    padding: 50px; /* Reduced padding for smaller screens */
+}
+.navbar {
+    z-index: 1; /* Ensure it's above other content */
+    /* background-color: rgba(0, 0, 0, 0.7); */
+}
+.nav-list {
+    flex-direction: column;
+}
+.nav-list.active {
+    width: 100%; /* Show menu on click */
+}
+.div-text {
+    margin-left: 0; /* Adjusted margin for smaller screens */
+    margin-top: 8%;
+    text-align: center; /* Centered text for smaller screens */
+}
+
+.btnn {
+    margin-top: 20px; /* Adjusted margin for smaller screens */
+    height: 50px; /* Reduced button height for smaller screens */
+    width: 150px; /* Reduced button width for smaller screens */
+    font-size: 25px; /* Adjusted font size for smaller screens */
+}
+
+.header-text h1 {
+    font-size: 60px; /* Adjusted font size for smaller screens */
+    margin-top: 10px; /* Adjusted margin for smaller screens */
+}
   
 }
 
