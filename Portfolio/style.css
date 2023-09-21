@@ -49,99 +49,10 @@ html{
     position: relative;
     z-index: 0;
 } 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 3; /* Keep z-index at 1 or lower than header text */
-    /* background-color: rgba(0, 0, 0, 0.7); */
-}
 
-
-.navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px;
-}
-
-.nav-list {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    
-}
-
-.nav-list li {
-    margin: 0 20px;
-    position: relative;
-}
-
-.nav-list li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    position: relative;
-}
-
-.nav-list li a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #DD2E18;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: width 0.5s;
-}
-
-.nav-list li a:hover::after {
-    width: 100%;
-}
-
-/* Hamburger menu */
-.toggle-button {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 3px 0;
-}
 
 @media (max-width: 768px) {
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        /* background-color: rgba(0, 0, 0, 0.1); */
-        position: absolute;
-        top: 60px;
-        left: 0; 
-        right: 0; 
-        width: 0;
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-
-    .toggle-button {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-end; 
-    }
-
-    .navbar {
-        justify-content: space-between;
-        padding: 20px;
-        margin-left: 0;
-    }
+ 
 
     .image img {
         max-width: 100%;
@@ -470,16 +381,7 @@ section {
 .image img {
     padding: 50px; /* Reduced padding for smaller screens */
 }
-.navbar {
-    z-index: 1; /* Ensure it's above other content */
-    /* background-color: rgba(0, 0, 0, 0.7); */
-}
-.nav-list {
-    flex-direction: column;
-}
-.nav-list.active {
-    width: 100%; /* Show menu on click */
-}
+
 .div-text {
     margin-left: 0; /* Adjusted margin for smaller screens */
     margin-top: 8%;
@@ -589,16 +491,7 @@ section {
 .image img {
     padding: 50px; /* Reduced padding for smaller screens */
 }
-.navbar {
-    z-index: 1; /* Ensure it's above other content */
-    /* background-color: rgba(0, 0, 0, 0.7); */
-}
-.nav-list {
-    flex-direction: column;
-}
-.nav-list.active {
-    width: 100%; /* Show menu on click */
-}
+
 .div-text {
     margin-left: 0; /* Adjusted margin for smaller screens */
     margin-top: 8%;
@@ -708,3 +601,4 @@ section {
 @media (min-width: 1920px) {
   
 }
+
