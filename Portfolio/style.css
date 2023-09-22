@@ -4,43 +4,64 @@
     padding: 0;
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;  
+    color: #f2f5f7;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
   
    
 }
+
+
 body {
-    background-image: url("tree.jpg");
-    background-size: cover; 
-    background-repeat: no-repeat;
-    width: 100%;
-    color: #fff;
+    background-image: url("computer.jpg");
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+ 
+
     font-family: 'Poppins', sans-serif;
 }
-html{
-    scroll-behavior: initial;
-}
-.container {
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(61, 53, 53, 0.5); 
+    z-index: -1; 
+  }
+html{
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    /* border: 1px solid red; */
-    /* overflow: hidden; */
 }
 #header {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     position: sticky;
-    z-index: 1; /* Increase the z-index value to ensure it's above other elements */
+    z-index: 1;
 }
 .header-text {
     display: flex;
     justify-content: space-between;
-    position: relative; /* Add position: relative */
-    z-index: 2; /* Increase the z-index value to be greater than that of nav */
+    position: relative; 
+    z-index: 2;
 }
  .image img {
     width: 100%;
@@ -50,10 +71,8 @@ html{
     z-index: 0;
 } 
 
-
 @media (max-width: 768px) {
- 
-
+   
     .image img {
         max-width: 100%;
         flex-basis: 100%;
@@ -72,9 +91,6 @@ html{
         flex-basis: 30px;
     }
 }
-
-
-
 
 .div-text {
     margin-left: 10%;
@@ -190,6 +206,11 @@ html{
     list-style: none;
     margin: 10px 0;
 }
+.paragraph p {
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.3rem;
+}
 .tab-contents ul li span{
     color: #DD2E18;
     font-size: 18px;
@@ -211,7 +232,7 @@ display: none;
 
 .sub-title{
     text-align: center; 
-    top: 20px; /* Adjust the top position as needed */
+    top: 20px; 
     left: 0;
     right: 0;
     
@@ -220,13 +241,13 @@ display: none;
 
 .project-container {
     display: inline-block;
-    margin-right: 20px; /* Adjust the margin as needed for spacing */
+    margin-right: 20px; 
 }
 
 .card-container {
     width: 50vh;
     height: 40vh;
-    perspective: 1000px; /* Adding perspective for 3D effect */
+    perspective: 1000px;
     margin-left: 2vh;
 
   }
@@ -240,8 +261,6 @@ display: none;
     transform-origin: center;
     cursor: pointer;
     margin-left: 3vh;
-
-
 }
 
 .card:hover {
@@ -274,7 +293,7 @@ display: none;
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #DD2E18; /* Change this to your desired button color */
+    background-color: #DD2E18; 
     color: black;
     text-decoration: none;
     border: none;
@@ -286,14 +305,12 @@ display: none;
   /* Hover effect */
   .button:hover {
     color: white;
-    background-color: black; /* Change this to the hover color */
-    transform: scale(1.05); /* Increase the size on hover */
+    background-color: black; 
+    transform: scale(1.05);
   }
 
 /* -------Contact-------- */
-#contact{
-    padding: 100px;
-}
+
 form input, form textarea{
     width: 100%;
     border-radius: 6px;
@@ -305,8 +322,6 @@ form input, form textarea{
 form{
     display: flex;
     flex-direction: column;
-    /* justify-content: spa; */
-    /* align-items: center; */
     align-items: start;
     width: 70%;
 }
@@ -316,12 +331,13 @@ align-items: start;
 .contact-right{
     display: flex;
     justify-content: center;
-    /* padding-right: 200px; */
+
 }
 .social-icons{
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    color: #DD2E18;
 
 }
 .social-icons a{
@@ -338,7 +354,7 @@ align-items: start;
 }
 .btn-s{
     background: #DD2E18;
-    color: #BBD0FF;
+    color: white;
     height: 60px;
     width: 150px;
     border: none;
@@ -366,216 +382,227 @@ align-items: start;
     font-weight: 300;
 }
 /* Responsive styles for screen width <= 480px */
+/* Responsive styles for screen width up to 480px */
 @media (max-width: 480px) {
-/* ----------------------HOME------------------------- */
-section {
-    width: 100%;
-    display: flex;
-}
-#header{
-    height: 98vh;
-}
-.header-text {
-    flex-direction: column-reverse; /* Change direction for smaller screens */
-}
-.image img {
-    padding: 50px; /* Reduced padding for smaller screens */
-}
-
-.div-text {
-    margin-left: 0; /* Adjusted margin for smaller screens */
-    margin-top: 8%;
-    text-align: center; /* Centered text for smaller screens */
-}
-
-.btnn {
-    margin-top: 20px; /* Adjusted margin for smaller screens */
-    height: 50px; /* Reduced button height for smaller screens */
-    width: 150px; /* Reduced button width for smaller screens */
-    font-size: 25px; /* Adjusted font size for smaller screens */
-}
-
-.header-text h1 {
-    font-size: 60px; /* Adjusted font size for smaller screens */
-    margin-top: 10px; /* Adjusted margin for smaller screens */
-}
-/* --------------------ABOUT--------------------------- */
-#about {
-    padding: 40px 0; /* Example: Reduced padding for mobile screens */
-    
-}
-.sub-title{
-    color: white;
-}
-
-.btn {
-    width: 30%;
-    font-size: 20px; /* Example: Reduced font size for buttons */
-}
-.row {
-    flex-direction: column; /* Stack columns vertically on mobile screens */
-}
-.about-col-1 {
-    margin-right: 0;
-    flex: 100%; /* Example: Full width for column on mobile screens */
-    margin-left: 0; /* Example: No left margin on mobile screens */
-    margin-bottom: 10px; /* Example: Reduced bottom margin for mobile screens */
-}
-.about-col-1 .img {
-    margin-right: 0; /* Remove right margin on mobile screens */
-}
-.about-col-2 {
-
-    flex-basis: 100%; /* Example: Full width for column on mobile screens */
-    margin-right: 0; /* Example: No right margin on mobile screens */
-}
-.sub-title {
-    font-size: 40px;
-    margin: 5% 0;
-}
-.tab-links {
-    margin-right: 20px; /* Example: Reduced right margin for tab links on mobile screens */
-}
-/* --------------------------------PROJECTS-------------------------- */
-#projects {
-    padding: 90px;
-    margin-bottom: 30px;
-    margin-top: 50%;
-  }
-
-  .sub-title {
-    top: 10px;
-  }
-
-  .project-container {
-    display: block;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .card-container {
-    width: 100%;
-    height: 30vh;
-    margin-left: 0;
-  }
-
-  .card {
-    margin-left: 0;
-  }
-  /* --------------------------------CONTACT--------------------------- */
-  #contact {
-    padding: 20px; /* Adjust the padding for smaller screens */
-}
-
-form {
-    width: 100%; /* Make the form full width for smaller screens */
-}
-
-.social-icons {
-    margin-top: 20px; /* Adjust margin-top for smaller screens */
-}
-}
-/* Responsive styles for screen width between 481px and 767px */
-@media (min-width: 481px) and (max-width: 767px) {
     /* ----------------------HOME------------------------- */
-section {
-    width: 100%;
-    display: flex;
-}
-#header{
-    height: 50vh;
-}
-.header-text {
-    flex-direction: column-reverse; /* Change direction for smaller screens */
-}
-.image img {
-    padding: 50px; /* Reduced padding for smaller screens */
-}
+    section {
+        width: 100%;
+        display: flex;
+    }
+    #header {
+        height: 100vh;
+    }
+    .header-text {
+        flex-direction: column-reverse;
+    }
+    .image img {
+        padding: 50px;
+    }
 
-.div-text {
-    margin-left: 0; /* Adjusted margin for smaller screens */
-    margin-top: 8%;
-    text-align: center; /* Centered text for smaller screens */
-}
+    .div-text {
+        margin-left: 0;
+        margin-top: 8%;
+        text-align: center;
+    }
 
-.btnn {
-    margin-top: 20px; /* Adjusted margin for smaller screens */
-    height: 50px; /* Reduced button height for smaller screens */
-    width: 150px; /* Reduced button width for smaller screens */
-    font-size: 25px; /* Adjusted font size for smaller screens */
-}
+    .btnn {
+        margin-top: 20px;
+        height: 50px;
+        width: 150px;
+        font-size: 25px;
+    }
 
-.header-text h1 {
-    font-size: 60px; /* Adjusted font size for smaller screens */
-    margin-top: 10px; /* Adjusted margin for smaller screens */
-}
-/* ---------------------------------ABOUT----------------------- */
-#about {
-    padding: 40px 0; /* Example: Reduced padding for mobile screens */
+    .header-text h1 {
+        font-size: 60px;
+        margin-top: 10px;
+    }
+    /* --------------------ABOUT--------------------------- */
+    #about {
+        padding: 40px 0;
+    }
+
+    .sub-title {
+        color: white;
+    }
+
+    .btn {
+        width: 30%;
+        font-size: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .about-col-1 {
+        margin-right: 0;
+        flex: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .about-col-1 .img {
+        margin-right: 0;
+    }
+
+    .about-col-2 {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+
+    .sub-title {
+        font-size: 40px;
+        margin: 5% 0;
+    }
+
+    .tab-links {
+        margin-right: 20px;
+    }
+    /* --------------------------------PROJECTS-------------------------- */
+    #projects {
+        padding: 90px;
+        margin-bottom: 30px;
+        margin-top: 50%;
+    }
+
+    .sub-title {
+        top: 10px;
+    }
+
+    .project-container {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .card-container {
+        width: 100%;
+        height: 30vh;
+        margin-left: 0;
+    }
+
+    .card {
+        margin-left: 0;
+    }
+    /* --------------------------------CONTACT--------------------------- */
    
+
+    form {
+        width: 100%;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+    }
 }
 
-.btn {
-    width: 30%;
-    font-size: 20px; /* Example: Reduced font size for buttons */
-}
-.row {
-    flex-direction: column; /* Stack columns vertically on mobile screens */
-}
-.about-col-1 {
-    margin-right: 0;
-    flex: 100%; /* Example: Full width for column on mobile screens */
-    margin-left: 0; /* Example: No left margin on mobile screens */
-    margin-bottom: 10px; /* Example: Reduced bottom margin for mobile screens */
-}
-.about-col-1 .img {
-    margin-right: 0; /* Remove right margin on mobile screens */
-}
-.about-col-2 {
+/* Responsive styles for screen width between 481px and 767px */
+@media (max-width: 767px) {
+    /* ----------------------HOME------------------------- */
+    section {
+        width: 100%;
+        display: flex;
+    }
+    #header {
+        height: 100vh;
+    }
+    #contact {
+        padding: 20px;
+        padding-top: 400px;
+    }
+  
+    .header-text {
+        flex-direction: column-reverse;
+    }
+    .image img {
+        padding: 50px;
+    }
 
-    flex-basis: 100%; /* Example: Full width for column on mobile screens */
-    margin-right: 0; /* Example: No right margin on mobile screens */
+    .div-text {
+        margin-left: 0;
+        margin-top: 8%;
+        text-align: center;
+    }
+
+    .btnn {
+        margin-top: 20px;
+        height: 50px;
+        width: 150px;
+        font-size: 25px;
+    }
+
+    .header-text h1 {
+        font-size: 60px;
+        margin-top: 10px;
+    }
+    /* ---------------------------------ABOUT----------------------- */
+    #about {
+        padding: 40px 0;
+    }
+
+    .btn {
+        width: 30%;
+        font-size: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .about-col-1 {
+        margin-right: 0;
+        flex: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .about-col-1 .img {
+        margin-right: 0;
+    }
+
+    .about-col-2 {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+
+    .sub-title {
+        font-size: 40px;
+        margin: 5% 0;
+    }
+
+    .tab-links {
+        margin-right: 20px;
+    }
+
+    /* ----------------------PROJECTS-------------------------------- */
+    #projects {
+        padding: 100px;
+        margin-bottom: 30px;
+        margin-top: 50%;
+        height: 100vh;
+    }
+
+    .sub-title {
+        top: 10px;
+    }
+
+    .project-container {
+        display: block;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+
+    .card-container {
+        width: 100%;
+        height: 30vh;
+        margin-left: 0;
+    }
+
+    .card {
+        margin-left: 0;
+    }
 }
-.sub-title {
-    font-size: 40px;
-    margin: 5% 0;
-}
-.tab-links {
-    margin-right: 20px; /* Example: Reduced right margin for tab links on mobile screens */
-}
 
-/* ----------------------PROJECTS-------------------------------- */
-#projects {
-    padding: 90px;
-    margin-bottom: 30px;
-    margin-top: 50%;
-    
-  }
-
-  .sub-title {
-    top: 10px;
-   
-  }
-
-  .project-container {
-    display: block;
-    margin-right: 10px;
-    margin-bottom: 20px;
-   
-  }
-
-  .card-container {
-    width: 100%;
-    height: 30vh;
-    margin-left: 0;
-    
-  }
-
-  .card {
-    margin-left: 0;
-    /* align-items: center; */
-  }
-}
 /* Responsive styles for screen width between 768px and 991px */
 @media (min-width: 768px) and (max-width: 991px) {
 
@@ -602,3 +629,144 @@ section {
   
 }
 
+
+
+/********************************navigationbar******************/
+
+
+nav{
+    height: 6rem;
+    width: 100vw;
+    background-color: rgba(128, 128, 128, 0.418);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+
+
+/*Styling Links*/
+.nav-links{
+    display: flex;
+    list-style: none; 
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: end;
+    align-items: center;
+    text-transform: uppercase;
+    float: right;
+    gap: 2rem;
+}
+.nav-links li a{
+    text-decoration: none;
+    margin: 0 0.7vw;
+}
+
+.nav-links li {
+    position: relative;
+}
+.nav-links li a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #DD2E18;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+.nav-links li a:hover::after{
+    width: 80%;
+}
+
+
+
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background: #DD2E18;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger{
+    display: none;
+}
+
+/*Styling for small screens*/
+@media screen and (max-width: 800px){
+    nav{
+        position: fixed;
+        z-index: 3;
+        background: none;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        float: left;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        border-radius: 2rem;
+        height:30vh;
+        width: 50%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+       
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    bottom: 1rem;
+    background-color: grey;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
