@@ -580,6 +580,8 @@ align-items: start;
         margin-bottom: 30px;
         margin-top: 50%;
         height: 100vh;
+        display: none;
+        background-color: #DD2E18;
     }
 
     .sub-title {
